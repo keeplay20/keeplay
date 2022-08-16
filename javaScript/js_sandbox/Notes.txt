@@ -1,0 +1,68 @@
+VAR - VARIABLES
+Variable notes
+    Can start with letters, numbers, _, $
+    Cannot start with number
+
+Multi word vars
+    var firstName = 'John'; // Camel case
+    var first_name = 'Sara'; // Underscore
+    var Firstname = 'Tom' // Pascal case
+    var firstname;
+
+CONST - CONSTANT
+Cannot reassign
+     name = 'Sara'
+Have to assign a value
+    const greetings;
+
+For arrays and objects, const can be used to change the data but we cannot re-decalre the const.
+    Example of Objects
+        const person = {
+        name: 'Sara',
+        age: 30
+        };
+        console.log(person)
+        person.name = 'John'
+        person.age = 33
+        console.log(person)
+
+    Not allowed
+        const person = {
+            name: 'Joe',
+            age: 21
+        }
+
+Example of Arrays
+        const numbers = [1, 2, 3, 4, 5];
+        console.log(numbers);
+        numbers.push(6);
+        console.log(numbers);
+
+    Not allowed
+        const numbers = [5, 4, 3, 2, 1];
+
+DATA TYPES
+    PRIMITIVE
+        STORED DIRECTLY IN LOCATION THE VARIABLE ACCESSES
+        STORED ON THE STACK
+
+            STRING / NUMBER / BOOLEAN / NULL / UNDEFINED / SYMBOLS(ES6)
+
+    REFERENCE
+        ACCESSED BY REFERENCE
+        STORED ON HEAP
+        POINTER TO A LOCATION IN MEMORY
+
+            ARRAYS / OBJECT LITERALS / FUNCTIONS / DATES
+
+JS - DYNAMICALLY TYPES LANGUAGE
+    ASSOCIATED WITH VALUES AND NOT VARIABLES
+    SAME VARIABLE CAN HOLD MULTIPLE TYPES
+    NO NEED TO SPECIFY TYPES
+    OTHER LANGUAGES ARE STATICALLY TYPED - JAVA / C# / C++
+    SUPERSET OF JS & ADDON TO STATIC TYPING - TYPESCRIPT / FLOW
+
+
+TEMPLATE LITERALS
+    ES5 - HTML IS WRITTEN IN LINE AND BECOMES INCONVENIENT
+    ES6 - HTML CODE CAN BE WRITTEN IN ``.
