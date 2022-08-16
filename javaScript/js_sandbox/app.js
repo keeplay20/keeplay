@@ -50,9 +50,9 @@
 // const name = 'John';
 // console.log(name);
 //Cannot reassign
-    // name = 'Sara'
+// name = 'Sara'
 //Have to assign a value
-    //const greetings;
+//const greetings;
 
 // For arrays and objects, const can be used to change the data but we cannot re-decalre the const.
 // Example of Objects
@@ -568,29 +568,114 @@
 // }
 
 
-//GLOBAL SCOPE
-var a = 1;
-let b = 2;
-const c = 3;
+// //GLOBAL SCOPE
+// var a = 1;
+// let b = 2;
+// const c = 3;
 
-// function test() { 
-//     var a = 4;
-//     let b = 5;
-//     const c = 6;
-//     console.log('FUNCTION SCOPE' , a ,b,c);
+// // function test() { 
+// //     var a = 4;
+// //     let b = 5;
+// //     const c = 6;
+// //     console.log('FUNCTION SCOPE' , a ,b,c);
+// // }
+// //test();
+
+// if (true) { 
+//     var a = 7;
+//     let b = 8;
+//     const c = 9;
+//     console.log('IF SCOPE', a, b, c);
 // }
-//test();
 
-if (true) { 
-    var a = 7;
-    let b = 8;
-    const c = 9;
-    console.log('IF SCOPE', a, b, c);
+// //VAR Changes the global scope.
+
+// for (var a = 0; a < 10; a++) { 
+//     console.log(`Loops ${a}`);
+// }
+// console.log('GLOBAL SCOPE', a, b, c);
+
+
+//Objects
+// const brad = {
+//     name: "Brad",
+//     age: 30
+// }
+// console.log(brad);
+// console.log(brad.age);
+
+// //Person Constructor
+// function Person(name, dob) {
+//     this.name = name;
+//     //this.age = age;
+//     this.birthday = new Date(dob);
+//     this.calculateAge = function () {
+//         const diff = Date.now() - this.birthday.getTime();
+//         const ageDate = new Date(diff);
+//         return Math.abs(ageDate.getUTCFullYear() - 1970);
+//     }
+// }
+
+// const personOne = new Person('Steve', '07-20-1991');
+// console.log(personOne.calculateAge());
+
+// Each object in js has a prototype and prototype is an object itself.
+// All objects inherit their property and methods from their prototype.
+
+//Object literals - Object.prototype
+//Object created through constructor - Constructor.prototype
+
+// //Person constructor
+// function Person(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+// }
+
+// Person.prototype.greeting = function () {
+//     return `Hello there ${this.firstName} ${this.lastName}`;
+// }
+
+// const person1 = new Person('John', 'Doe');
+// // console.log(person1.firstName.greeting());
+
+// //Inherit the person prototype methods
+// Customer.prototype = Object.create(Person.prototype);
+
+// //Make customer prototype return customer()
+// Customer.prototype.constructor = Customer;
+
+// // Customer constructor
+// function Customer(firstName, lastName, phone, membership) {
+//     Person.call(this, firstName, lastName);
+//     this.phone = phone;
+//     this.membership = membership;
+// }
+
+// const customer1 = new Customer('Tom', 'Smith', '555-555-5555', 'Standard');
+// console.log(customer1);
+
+// ES6 
+
+class Person {
+    constructor(firsName, lastName) {
+        this.firsName = firsName;
+        this.lastName = lastName;
+    }
+    greeting() {
+        return `Hello there ${this.firsName} ${this.lastName}`;
+    }
 }
 
-//VAR Changes the global scope.
-
-for (var a = 0; a < 10; a++) { 
-    console.log(`Loops ${a}`);
+class Customer extends Person {
+    constructor(firstName, lastName, phone, membership) {
+        super(firstName, lastName);
+        this.phone = phone;
+        this.membership = membership;
+    }
+    static getMembershipCost() {
+        return 500;
+    }
 }
-console.log('GLOBAL SCOPE', a, b, c);
+
+const john = new Customer('Mary', 'Williams', '555-555-5555', 'Standard');
+console.log(john);
