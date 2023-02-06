@@ -1,9 +1,9 @@
 <h1 align="center">Hi 👋, I'm Mandar Vyas</h1>
 <h3 align="center">A passionate frontend developer from India</h3>
 
-- 🔭 I’m currently working on **Responsive Website**
+- 🔭 I’m currently working on **Age calculators**
 
-- 🌱 I’m currently learning **CSS Grids, Flexbox**
+- 🌱 I’m currently learning **Android App Development using Kotlin**
 
 - 👨‍💻 All of my projects are available at [https://github.com/keeplay20/keeplay](https://github.com/keeplay20/keeplay)
 
