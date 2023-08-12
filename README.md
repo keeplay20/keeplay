@@ -1,4 +1,3 @@
-preview
 <h1 align="center">Hi 👋, I'm Mandar Vya</h1>
 <h3 align="center">A passionate SDET from India</h3>
 
