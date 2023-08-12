@@ -1,18 +1,3 @@
-github profile markdown generator logo
-GitHub Profile README Generator
-Star this repo
-16787
-Fork on GitHub
-4741
-
-back to edit
-
-copy-markdown
-
-download markdown
-
-download backup
-
 preview
 <h1 align="center">Hi 👋, I'm Mandar Vya</h1>
 <h3 align="center">A passionate SDET from India</h3>
